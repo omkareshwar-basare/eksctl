@@ -12,3 +12,9 @@ managedNodeGroups:
     instanceType: t3.medium 
     spot: false
     desiredCapacity: 2
+
+iam:
+  withAddonPolicies:
+    autoScaler: true
+    externalDNS: true
+    certManager: true
