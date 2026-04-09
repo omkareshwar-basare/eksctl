@@ -8,7 +8,7 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: ON_DEMAND
+  - name: ON-DEMAND
     instanceType: t3.medium 
     spot: false
     desiredCapacity: 2
