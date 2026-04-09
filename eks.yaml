@@ -1,5 +1,3 @@
-# spot-cluster.yaml
-
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
@@ -7,14 +5,18 @@ metadata:
   name: roboshop
   region: us-east-1
 
-managedNodeGroups:
-  - name: ON-DEMAND
-    instanceType: t3.medium 
-    spot: false
-    desiredCapacity: 2
+autoModeConfig:
+  enabled: false
 
-iam:
-  withAddonPolicies:
-    autoScaler: true
-    externalDNS: true
-    certManager: true
+managedNodeGroups:
+  - name: on-demand
+    instanceType: t3.medium
+    desiredCapacity: 2
+    capacityType: ON_DEMAND
+    volumeSize: 20
+
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+        externalDNS: true
+        certManager: true
