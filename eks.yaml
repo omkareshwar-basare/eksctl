@@ -9,6 +9,6 @@ metadata:
 
 managedNodeGroups:
   - name: ON_DEMAND
-    instanceTypes: t3.large 
+    instanceType: t3.medium 
     spot: false
     desiredCapacity: 2
