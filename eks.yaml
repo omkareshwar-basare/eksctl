@@ -20,7 +20,3 @@ managedNodeGroups:
         autoScaler: true
         externalDNS: true
         certManager: true
-
-    ssh:
-      allow: true
-      publicKeyName: your-keypair
