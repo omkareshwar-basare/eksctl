@@ -12,11 +12,15 @@ managedNodeGroups:
   - name: on-demand
     instanceType: t3.medium
     desiredCapacity: 2
-    capacityType: ON_DEMAND
     volumeSize: 20
+    spot: false
 
     iam:
       withAddonPolicies:
         autoScaler: true
         externalDNS: true
         certManager: true
+
+    ssh:
+      allow: true
+      publicKeyName: your-keypair
