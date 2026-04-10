@@ -12,8 +12,16 @@ managedNodeGroups:
   - name: on-demand
     instanceType: t3.medium
     desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
     volumeSize: 20
+
     spot: false
+    privateNetworking: true
+
+    ssh:
+      allow: true   # optional but useful
+      publicKeyName: your-key-name   # replace with your EC2 key pair
 
     iam:
       withAddonPolicies:
