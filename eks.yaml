@@ -19,10 +19,6 @@ managedNodeGroups:
     spot: false
     privateNetworking: true
 
-    ssh:
-      allow: true   # optional but useful
-      publicKeyName: your-key-name   # replace with your EC2 key pair
-
     iam:
       withAddonPolicies:
         autoScaler: true
